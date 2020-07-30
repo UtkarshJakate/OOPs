@@ -2,20 +2,19 @@
 #include<string.h>
 
 using namespace std;
-
 struct student
 {
     char name[100];
     int roll;
     float marks;
-};
+}s1, s2;
 
 int main(){
-    struct student s1,s2;
+
     strcpy(s1.name,"Acs");
     s1.marks = 23.124;
     s1.roll = 45;
-
+    
     cout << "Enter Data for Second Structure: Name, Roll no, Marks" << endl;
     cin >> s2.name >> s2.marks >> s2.roll;
 

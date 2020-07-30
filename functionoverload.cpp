@@ -1,4 +1,4 @@
-
+/*
 #include<iostream>
 #include<string.h>
 using namespace std;
@@ -22,12 +22,13 @@ float sum(double a, double b){
     Notice that the return types of all these 3 functions are not the same. 
     Overloaded functions may or may not have different return types 
     but they must have different arguments.
-*/
+*//*
 int main(){
     cout << sum(4,5) << endl;
     cout << sum(2.4f, 2.1f) << endl;
     cout << sum(3.123,23.24) << endl;
 }
+*/
 
 
 
@@ -35,21 +36,18 @@ int main(){
 
 
 
-/*
 #include<iostream>
 using namespace std;
 int function() {
     return 10;
 }
-char function() {  // compiler error; new declaration of foo() 
+char function(int a) {  // compiler error; new declaration of foo() 
     return 'a';
 }
 
 int main()
 {
-    char ch = function();
+    char ch = function(1);
 
     return 0;
 }
-
-*/
