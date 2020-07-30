@@ -3,7 +3,8 @@ using namespace std;
 
 class First
 {
-    public :void display()
+    public :
+    void display()
     {
         cout<<"This display is inside the first class" << endl;
     }
@@ -18,10 +19,10 @@ class Second: public First
 };
 int main()
 {
-First f;
-f.display();
-//f.show();
-Second s;
-s.display();
-s.show();
+    First f;
+    f.display();
+    //f.show();
+    Second s;
+    s.display();
+    s.show();
 }

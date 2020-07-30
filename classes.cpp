@@ -13,7 +13,6 @@ class Motor {
         const int a,b;
     public:
         Motor() : a(1),b(2){
-
         }
         void getData();
         void printData();
@@ -25,20 +24,24 @@ class Motor {
 };
 
 
+
 int main(){
     Motor m1,m2;
     //Membership operator usage
 
     m1.getData();
-    //m2.getData();
+    m2.getData();
+
+    
     //m1.printData();
     //m1.changeSpeed(40);
     //m1.printData();
     //m2.printData();
 
-    //cout << endl << "Max of m1 and m2: " << m1.max(m2) <<endl;
+    cout << endl << "Max of m1 and m2: " << m1.max(m2) <<endl;
 
     m1.printConstants();
+    m2.printConstants();
     return 0;
 }
 
@@ -77,6 +80,7 @@ void Motor::changeSpeed(int a){
     //this->speed = speed;
     speed = a;
 }
+
 
 int Motor::max(Motor a){
     return speed > a.speed? speed: speed;
