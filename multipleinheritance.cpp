@@ -18,8 +18,22 @@ class Two {
     }
 };
 
-class Main : public One, public Two{
+class Main : protected One, protected Two{
+    protected:
+    int a;
+    void getinfoOne(int x){
+        a = x;
+    }
+    protected:
+    int b;
+    void getinfoTwo(int y){
+        b = y;
+    }
     public :
+        void info(){
+            getinfoOne(10);
+            getinfoTwo(20);
+        }
         void Display(){
         cout << "Value of a = " << a << endl;   //accessing member variables of class One
         cout << "Value of b = " << b << endl;    //accessing member variables of class Two
@@ -30,8 +44,9 @@ class Main : public One, public Two{
 int main()
 {
     Main main;
-    main.getinfoOne(10);  //accessing member function of class One
-    main.getinfoTwo(20);  //accessing member function of class Two
+    //main.getinfoOne(10);  //accessing member function of class One
+    //main.getinfoTwo(20);  //accessing member function of class Two
+    main.info();
     main.Display();
     return 0;
 }

@@ -10,14 +10,16 @@ class Base
        int e;
 };
 class A: public Base{
+    private:
+        int val;
+
+};
+
+class B: public A, public Base{
     
 };
 
-class B: private Base{
-    
-};
-
-class C: protected Base{
+class C: protected B{
     
 };
 

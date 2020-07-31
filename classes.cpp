@@ -28,11 +28,9 @@ class Motor {
 int main(){
     Motor m1,m2;
     //Membership operator usage
-
     m1.getData();
     m2.getData();
 
-    
     //m1.printData();
     //m1.changeSpeed(40);
     //m1.printData();

@@ -6,12 +6,26 @@ public:
     base()
     {
         cout<<"base class constructor"<<endl;
-    } ~base()
+    }
+    ~base()
     {
         cout<<"base class destructor"<<endl;
     }
 };
-class derived:public base
+
+class base_2
+{
+public:
+    base_2()
+    {
+        cout<<"base 2 class constructor"<<endl;
+    }
+    ~base_2()
+    {
+        cout<<"base 2 class destructor"<<endl;
+    }
+};
+class derived:public base_2, public base
 {
 public:
     derived()

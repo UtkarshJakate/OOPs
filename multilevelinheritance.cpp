@@ -13,7 +13,7 @@ class First {
     }
 };
 
-class Second : public First{
+class Second : protected First{
     protected:
     int b;
     int c;
@@ -28,7 +28,7 @@ class Second : public First{
     }
 };
 
-class Third : public Second{
+class Third : protected Second{
     int d;
     public:
     void display(){
@@ -45,5 +45,7 @@ int main()
     third.getinfofirst(10);
     third.getinfosecond(20, 30);
     third.display();
+
+    
     return 0;
 }

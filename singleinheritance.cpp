@@ -12,7 +12,8 @@ class First
 
 class Second: public First
 {
-    public: void show()
+    public: 
+    void display()
     {
         cout<<"This show is inside the second class which is derived from parent class" << endl;
     }
@@ -24,5 +25,6 @@ int main()
     //f.show();
     Second s;
     s.display();
-    s.show();
+    //s.display();
+    //s.show();
 }

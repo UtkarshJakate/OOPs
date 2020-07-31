@@ -1,11 +1,11 @@
-#include <iostream>
-using namespace std;
-
+/*
 // base class
 class Parent
 {
 
     public:
+    
+    Parent(){}
     // base class's parameterised constructor
     Parent(int i)
     {  int x =i;
@@ -18,7 +18,7 @@ class Child : public Parent
 {
     public:
     // sub class's parameterised constructor
-    Child(int j): Parent(j)
+    Child(int j)//:Parent(j)
     {
         cout << "Inside sub class's parameterised constructor" << endl;
     }
@@ -29,8 +29,11 @@ int main() {
     Child obj1(10);
     return 0;
 }
+*/
 
-/*
+#include <iostream>
+#include <string.h>
+using namespace std;
 class student{
     char name[20];
     char course[20];
@@ -49,13 +52,13 @@ class student{
 class marks : public student{
     int m1,m2,m3;
     public:
-    marks(char name[20], char course[20],int m1, int m2, int m3){
-        student(name,course);
+    marks(char name[20], char course[20],int m1, int m2, int m3):student(name,course){
         this->m1 = m1;
         this->m2 = m2;
         this->m3 = m3;
     }
     void showmarks(){
+        showdetails();
         cout << "M1: " << m1 << endl;
         cout << "M2: " << m2 << endl;
         cout << "M3: " << m3 << endl;
@@ -66,6 +69,6 @@ int main(){
     char name[20] = "ABC";
     char sub[20] = "C++";
     marks m(name,sub,56,90,90);
+    m.showmarks();
     return 0;
 }
-*/
